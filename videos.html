@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Watch space documentaries, planetary explorations, and cosmic mystery videos from DEEP STELLAR.">
+  <meta name="theme-color" content="#050711">
+  <title>Cosmic Documentaries & Video Archives | DEEP STELLAR</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="loader" id="loader">
+    <div class="loader-mark">DS</div><span>STREAMING VIDEO ARCHIVES</span>
+    <div class="loader-line"><i></i></div>
+  </div>
+  <canvas id="starfield" aria-hidden="true"></canvas>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="index.html" aria-label="Deep Stellar home">
+      <span class="brand-symbol"><span>✦</span></span>
+      <span class="brand-name">DEEP<span>STELLAR</span><small>EXPLORE THE UNKNOWN</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Home</a>
+      <a href="universe.html">Universe</a>
+      <a href="solar-system.html">Solar System</a>
+      <a href="missions.html">Missions</a>
+      <a class="active" href="videos.html">Videos</a>
+      <a href="crew.html">Our Crew</a>
+      <a href="gallery.html">Gallery</a>
+    </nav>
+    <a class="header-cta" href="https://www.youtube.com/@DeepStellar" target="_blank" rel="noopener">Subscribe <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="breadcrumb">
+        <a href="index.html">HOME</a> <span>/</span> <span>VIDEO LIBRARY</span>
+      </div>
+      <div class="eyebrow"><span class="pulse-dot"></span> CINEMATIC ASTRONOMY & DOCUMENTARIES</div>
+      <h1>STORIES FROM<br><em>THE STARS.</em></h1>
+      <p class="page-hero-lead">Immerse yourself in documentary-style cosmic deep-dives, scientific explanations of black holes, tours of strange exoplanets, and cinematic journeys across spacetime.</p>
+      <div class="hero-actions" style="justify-content:center;">
+        <a class="btn btn-primary" href="#library">Browse Collection <span>↗</span></a>
+        <a class="btn btn-outline" href="https://www.youtube.com/@DeepStellar" target="_blank" rel="noopener">YouTube Channel ↗</a>
+      </div>
+    </section>
+
+    <!-- Video Library & Search -->
+    <section class="section videos-section" id="library">
+      <div class="section-heading reveal">
+        <div>
+          <div class="section-kicker">CINEMATIC ARCHIVES</div>
+          <h2>Documentary <em>Library.</em></h2>
+        </div>
+        <p>Filter by topic or search by keyword to discover cosmic stories.</p>
+      </div>
+
+      <div class="video-tools reveal">
+        <div class="filter-tabs" id="videoFilters">
+          <button class="filter-btn active" data-filter="all">All Stories</button>
+          <button class="filter-btn" data-filter="mysteries">Cosmic Mysteries</button>
+          <button class="filter-btn" data-filter="planets">Solar System & Worlds</button>
+          <button class="filter-btn" data-filter="galaxies">Galaxies & Deep Space</button>
+        </div>
+        <label class="search-box">
+          <span>⌕</span>
+          <input type="search" id="videoSearch" placeholder="Search documentaries…" aria-label="Search documentaries">
+        </label>
+      </div>
+
+      <div class="video-grid" id="videoGrid">
+        <article class="video-card reveal" data-category="mysteries" data-title="What Lies Beyond the Observable Universe">
+          <a class="video-thumb thumb-one" href="https://www.youtube.com/@DeepStellar" target="_blank" rel="noopener">
+            <span class="video-play">▶</span>
+            <span class="video-duration">42 MIN · 4K</span>
+          </a>
+          <div class="video-meta">
+            <span>MYSTERIES · FEATURED</span>
+            <h3>What Lies Beyond the Observable Universe?</h3>
+            <p>Could our observable horizon be just a minuscule pocket inside a vast multiverse? We examine cosmic inflation and spatial geometry.</p>
+            <a href="https://www.youtube.com/@DeepStellar" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+          </div>
+        </article>
+
+        <article class="video-card reveal" data-category="planets" data-title="A Journey Through Our Solar System">
+          <a class="video-thumb thumb-two" href="https://www.youtube.com/@DeepStellar" target="_blank" rel="noopener">
+            <span class="video-play">▶</span>
+            <span class="video-duration">58 MIN · 4K</span>
+          </a>
+          <div class="video-meta">
+            <span>PLANETS · EXPEDITION</span>
+            <h3>A Journey Through Our Solar System</h3>
+            <p>From the inferno of Mercury to the ice volcanoes of Pluto, travel across 4.5 billion years of planetary history and exploration.</p>
+            <a href="https://www.youtube.com/@DeepStellar" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+          </div>
+        </article>
+
+        <article class="video-card reveal" data-category="galaxies" data-title="The Giants of the Cosmos Superclusters">
+          <a class="video-thumb thumb-three" href="https://www.youtube.com/@DeepStellar" target="_blank" rel="noopener">
+            <span class="video-play">▶</span>
+            <span class="video-duration">35 MIN · 4K</span>
+          </a>
+          <div class="video-meta">
+            <span>GALAXIES · COSMIC WEB</span>
+            <h3>The Giants of the Cosmos</h3>
+            <p>Investigating the Laniakea supercluster, the Great Attractor, and the gravitational threads weaving trillions of galaxies together.</p>
+            <a href="https://www.youtube.com/@DeepStellar" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+          </div>
+        </article>
+
+        <article class="video-card reveal" data-category="mysteries" data-title="Inside a Supermassive Black Hole Event Horizon">
+          <a class="video-thumb thumb-one" href="https://www.youtube.com/@DeepStellar" target="_blank" rel="noopener">
+            <span class="video-play">▶</span>
+            <span class="video-duration">28 MIN · 4K</span>
+          </a>
+          <div class="video-meta">
+            <span>MYSTERIES · RELATIVITY</span>
+            <h3>Inside a Supermassive Black Hole</h3>
+            <p>What happens when you cross the event horizon? Explore gravitational time dilation, spaghettification, and quantum information paradoxes.</p>
+            <a href="https://www.youtube.com/@DeepStellar" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+          </div>
+        </article>
+
+        <article class="video-card reveal" data-category="planets" data-title="Ocean Worlds of Europa and Enceladus">
+          <a class="video-thumb thumb-two" href="https://www.youtube.com/@DeepStellar" target="_blank" rel="noopener">
+            <span class="video-play">▶</span>
+            <span class="video-duration">31 MIN · 4K</span>
+          </a>
+          <div class="video-meta">
+            <span>PLANETS · ASTROBIOLOGY</span>
+            <h3>Alien Oceans: Life in Our Solar System</h3>
+            <p>Vast global oceans beneath miles of ice, hydrothermal vents spitting organic chemistry: could life thrive in the outer solar system?</p>
+            <a href="https://www.youtube.com/@DeepStellar" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+          </div>
+        </article>
+
+        <article class="video-card reveal" data-category="galaxies" data-title="The Birth and Death of Stars Nebulae">
+          <a class="video-thumb thumb-three" href="https://www.youtube.com/@DeepStellar" target="_blank" rel="noopener">
+            <span class="video-play">▶</span>
+            <span class="video-duration">45 MIN · 4K</span>
+          </a>
+          <div class="video-meta">
+            <span>GALAXIES · STELLAR EVOLUTION</span>
+            <h3>The Life Cycle of Stars</h3>
+            <p>Follow a star's dramatic journey from a collapsing molecular cloud to stellar fusion, supernovae explosions, and neutron star remnants.</p>
+            <a href="https://www.youtube.com/@DeepStellar" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+          </div>
+        </article>
+      </div>
+
+      <p class="video-note" style="text-align:center; margin-top:35px;">
+        All documentaries feature high-definition simulations, telescope imagery, and original scientific narratives.
+      </p>
+    </section>
+
+    <!-- Next Section CTA -->
+    <section class="final-cta section reveal">
+      <div class="cta-stars">✦　·　✧　　·　✦</div>
+      <div class="section-kicker">SEE THE PHOTOGRAPHY</div>
+      <h2>High-Definition<br><em>Cosmic Gallery.</em></h2>
+      <p>Browse our curated astrophotography collection from Hubble, James Webb, and deep-space orbital missions.</p>
+      <div class="page-nav-bar">
+        <a class="btn btn-primary" href="gallery.html">Open Gallery <span>↗</span></a>
+        <a class="btn btn-outline" href="crew.html">Meet The Crew ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand" href="index.html">
+      <span class="brand-symbol"><span>✦</span></span>
+      <span class="brand-name">DEEP<span>STELLAR</span><small>EXPLORE THE UNKNOWN</small></span>
+    </a>
+    <p>Exploring the universe, one question at a time.</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="universe.html">Universe</a>
+      <a href="solar-system.html">Solar System</a>
+      <a href="missions.html">Missions</a>
+      <a href="videos.html">Videos</a>
+      <a href="crew.html">Crew</a>
+      <a href="gallery.html">Gallery</a>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> DEEP STELLAR. ALL RIGHTS RESERVED. | Design by Muhammad Asim Yar</span>
+      <a href="#top">BACK TO TOP ↑</a>
+      <a href="https://khudayarlabs.com/" target="_blank" rel="noopener">Powered by Khudayar Labs</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

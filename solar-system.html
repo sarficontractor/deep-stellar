@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Interactive 3D Solar System explorer. Discover the Sun, eight planets, moons, and outer boundaries with DEEP STELLAR.">
+  <meta name="theme-color" content="#050711">
+  <title>Solar System — Interactive 3D Planetary Explorer | DEEP STELLAR</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="loader" id="loader">
+    <div class="loader-mark">DS</div><span>CALIBRATING ORBITAL TELEMETRY</span>
+    <div class="loader-line"><i></i></div>
+  </div>
+  <canvas id="starfield" aria-hidden="true"></canvas>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="index.html" aria-label="Deep Stellar home">
+      <span class="brand-symbol"><span>✦</span></span>
+      <span class="brand-name">DEEP<span>STELLAR</span><small>EXPLORE THE UNKNOWN</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Home</a>
+      <a href="universe.html">Universe</a>
+      <a class="active" href="solar-system.html">Solar System</a>
+      <a href="missions.html">Missions</a>
+      <a href="videos.html">Videos</a>
+      <a href="crew.html">Our Crew</a>
+      <a href="gallery.html">Gallery</a>
+    </nav>
+    <a class="header-cta" href="videos.html">Start Exploring <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="breadcrumb">
+        <a href="index.html">HOME</a> <span>/</span> <span>SOLAR SYSTEM</span>
+      </div>
+      <div class="eyebrow"><span class="pulse-dot"></span> 4.6 BILLION YEARS OF GRAVITATIONAL BALANCE</div>
+      <h1>OUR CELESTIAL<br><em>NEIGHBOURHOOD.</em></h1>
+      <p class="page-hero-lead">Orbiting a luminous yellow dwarf star, our solar system is home to eight vastly different worlds, rocky asteroid belts, icy ring systems, and distant ocean-bearing moons harboring potential for life.</p>
+      <div class="hero-actions" style="justify-content:center;">
+        <a class="btn btn-primary" href="#interactive-model">Launch 3D Model <span>↗</span></a>
+        <a class="btn btn-outline" href="#planetary-guide">Planetary Encyclopedia ↗</a>
+      </div>
+    </section>
+
+    <!-- Interactive 3D Model Section -->
+    <section class="section" id="interactive-model" style="padding-top:60px;">
+      <div class="section-heading reveal">
+        <div>
+          <div class="section-kicker">3D ORBITAL SIMULATION</div>
+          <h2>Interactive <em>Solar System.</em></h2>
+        </div>
+        <p>Drag to rotate camera · Scroll to zoom · Select any celestial body to focus.</p>
+      </div>
+
+      <div class="solar-layout reveal">
+        <div class="solar-canvas-wrap">
+          <div id="solarCanvas" aria-label="Interactive 3D solar system"></div>
+          <div class="solar-hint">DRAG TO ROTATE · SCROLL TO ZOOM</div>
+          <div class="solar-loading" id="solarLoading">Loading 3D solar system…</div>
+        </div>
+        <aside class="planet-panel">
+          <div class="panel-label">MISSION DATABASE / PLANET PROFILE</div>
+          <div class="planet-symbol" id="planetSymbol">☉</div>
+          <h3 id="planetName">The Sun</h3>
+          <p id="planetDescription">The star at the heart of our solar system, holding eight planets in its gravitational embrace.</p>
+          <div class="planet-facts">
+            <div><span>TYPE</span><b id="planetType">Star</b></div>
+            <div><span>DIAMETER</span><b id="planetDiameter">1.39 million km</b></div>
+            <div><span>DAY LENGTH</span><b id="planetDay">About 25 Earth days</b></div>
+          </div>
+          <div class="planet-selector" id="planetSelector"></div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Planetary Encyclopedia -->
+    <section class="section" id="planetary-guide">
+      <div class="section-heading reveal">
+        <div>
+          <div class="section-kicker">01 / PLANETARY ENCYCLOPEDIA</div>
+          <h2>Worlds of <em>Fire and Ice.</em></h2>
+        </div>
+        <p>A closer look at the diverse conditions across the inner and outer systems.</p>
+      </div>
+
+      <div class="content-grid reveal">
+        <div class="cosmic-box">
+          <span class="cosmic-box-tag">INNER ROCKY WORLD</span>
+          <h3>Mercury</h3>
+          <p>The smallest and innermost planet, with extreme temperature swings ranging from 430°C in sunlight to -180°C in deep shade, racing around the sun in just 88 Earth days.</p>
+          <ul class="spec-list">
+            <li><span>ORBITAL PERIOD</span><strong>88 Days</strong></li>
+            <li><span>SURFACE TEMP</span><strong>-180°C to 430°C</strong></li>
+            <li><span>MOONS</span><strong>0</strong></li>
+          </ul>
+        </div>
+
+        <div class="cosmic-box">
+          <span class="cosmic-box-tag">GREENHOUSE CAULDRON</span>
+          <h3>Venus</h3>
+          <p>Earth's scorching twin possesses a crushing atmosphere of carbon dioxide and clouds of sulfuric acid, creating a runaway greenhouse effect making it the hottest planet.</p>
+          <ul class="spec-list">
+            <li><span>ORBITAL PERIOD</span><strong>225 Days</strong></li>
+            <li><span>SURFACE TEMP</span><strong>465°C</strong></li>
+            <li><span>ATMOSPHERE</span><strong>96.5% CO₂</strong></li>
+          </ul>
+        </div>
+
+        <div class="cosmic-box">
+          <span class="cosmic-box-tag">THE BLUE MARBLE</span>
+          <h3>Earth</h3>
+          <p>The only known haven for life in the cosmos, equipped with active plate tectonics, abundant liquid water oceans, and an oxygen-rich nitrogen atmosphere shielded by a powerful magnetosphere.</p>
+          <ul class="spec-list">
+            <li><span>ORBITAL PERIOD</span><strong>365.25 Days</strong></li>
+            <li><span>WATER COVERAGE</span><strong>71%</strong></li>
+            <li><span>MOONS</span><strong>1 (The Moon)</strong></li>
+          </ul>
+        </div>
+
+        <div class="cosmic-box">
+          <span class="cosmic-box-tag">THE RED FRONTIER</span>
+          <h3>Mars</h3>
+          <p>A desert world with dusty iron-oxide soil, polar ice caps, and Olympus Mons—the solar system's tallest volcano. Evidence shows Mars once had lakes, rivers, and a denser atmosphere.</p>
+          <ul class="spec-list">
+            <li><span>ORBITAL PERIOD</span><strong>687 Days</strong></li>
+            <li><span>SURFACE TEMP</span><strong>-65°C Avg</strong></li>
+            <li><span>MOONS</span><strong>2 (Phobos & Deimos)</strong></li>
+          </ul>
+        </div>
+
+        <div class="cosmic-box">
+          <span class="cosmic-box-tag">THE GAS TITAN</span>
+          <h3>Jupiter</h3>
+          <p>More massive than all other planets combined, Jupiter is a gas giant with swirling atmospheric belts, the Great Red Spot storm, and more than 95 known orbiting moons.</p>
+          <ul class="spec-list">
+            <li><span>ORBITAL PERIOD</span><strong>11.86 Years</strong></li>
+            <li><span>GREAT RED SPOT</span><strong>>350 Years Old</strong></li>
+            <li><span>MOONS</span><strong>95+ Moons</strong></li>
+          </ul>
+        </div>
+
+        <div class="cosmic-box">
+          <span class="cosmic-box-tag">JEWEL OF THE SYSTEM</span>
+          <h3>Saturn</h3>
+          <p>Adorned with thousands of dazzling ringlets made of water ice and rocky debris, Saturn is also home to Titan, a moon with rivers and lakes of liquid methane.</p>
+          <ul class="spec-list">
+            <li><span>ORBITAL PERIOD</span><strong>29.4 Years</strong></li>
+            <li><span>RING SYSTEM WIDTH</span><strong>282,000 km</strong></li>
+            <li><span>MOONS</span><strong>146 Moons</strong></li>
+          </ul>
+        </div>
+
+        <div class="cosmic-box">
+          <span class="cosmic-box-tag">THE TILTED ICE GIANT</span>
+          <h3>Uranus</h3>
+          <p>Rotating nearly sideways at a 98-degree axial tilt, Uranus exhibits extreme 42-year seasons of continuous sunlight and darkness above an icy mantle of water, ammonia, and methane.</p>
+          <ul class="spec-list">
+            <li><span>ORBITAL PERIOD</span><strong>84 Years</strong></li>
+            <li><span>AXIAL TILT</span><strong>97.77°</strong></li>
+            <li><span>MOONS</span><strong>28 Moons</strong></li>
+          </ul>
+        </div>
+
+        <div class="cosmic-box">
+          <span class="cosmic-box-tag">THE SUPERSONIC REALM</span>
+          <h3>Neptune</h3>
+          <p>The most distant major planet, enveloped in vivid azure clouds driven by supersonic winds reaching 2,100 km/h, orbiting in the shadowy twilight over 4.5 billion km from the Sun.</p>
+          <ul class="spec-list">
+            <li><span>ORBITAL PERIOD</span><strong>164.8 Years</strong></li>
+            <li><span>WIND SPEEDS</span><strong>Up to 2,100 km/h</strong></li>
+            <li><span>MAJOR MOON</span><strong>Triton (Geysers)</strong></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Next Section CTA -->
+    <section class="final-cta section reveal">
+      <div class="cta-stars">✦　·　✧　　·　✦</div>
+      <div class="section-kicker">DISCOVER OUR EXPEDITIONS</div>
+      <h2>Join the Missions of<br><em>Stellar One.</em></h2>
+      <p>Learn how our simulated deep-space spacecraft traverses these celestial distances on humanity's boldest voyages.</p>
+      <div class="page-nav-bar">
+        <a class="btn btn-primary" href="missions.html">Explore Missions <span>↗</span></a>
+        <a class="btn btn-outline" href="crew.html">Meet the Crew ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand" href="index.html">
+      <span class="brand-symbol"><span>✦</span></span>
+      <span class="brand-name">DEEP<span>STELLAR</span><small>EXPLORE THE UNKNOWN</small></span>
+    </a>
+    <p>Exploring the universe, one question at a time.</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="universe.html">Universe</a>
+      <a href="solar-system.html">Solar System</a>
+      <a href="missions.html">Missions</a>
+      <a href="videos.html">Videos</a>
+      <a href="crew.html">Crew</a>
+      <a href="gallery.html">Gallery</a>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> DEEP STELLAR. ALL RIGHTS RESERVED. | Design by Muhammad Asim Yar</span>
+      <a href="#top">BACK TO TOP ↑</a>
+      <a href="https://khudayarlabs.com/" target="_blank" rel="noopener">Powered by Khudayar Labs</a>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r152/three.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

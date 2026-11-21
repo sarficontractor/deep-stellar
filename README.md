@@ -18,7 +18,7 @@ A cinematic, responsive space-exploration website built with **HTML, CSS and van
 
 ## Run locally
 1. Extract the ZIP.
-2. Open the `deep-stellar-v2` folder.
+2. Open the `deep-stellar` folder.
 3. Double-click `index.html` to preview, or use VS Code with the Live Server extension.
 4. Internet is required for Google Fonts, remote demo images and the Three.js CDN.
 
@@ -32,7 +32,7 @@ A cinematic, responsive space-exploration website built with **HTML, CSS and van
 
 ## Folder structure
 ```text
-deep-stellar-v2/
+deep-stellar/
 ├── index.html
 ├── README.md
 ├── css/

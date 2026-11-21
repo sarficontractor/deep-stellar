@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore galaxies, nebulae, cosmic mysteries, and the deep architecture of the universe with DEEP STELLAR.">
+  <meta name="theme-color" content="#050711">
+  <title>The Universe — Deep Space & Cosmic Wonders | DEEP STELLAR</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="loader" id="loader">
+    <div class="loader-mark">DS</div><span>MAPPING DEEP SPACE</span>
+    <div class="loader-line"><i></i></div>
+  </div>
+  <canvas id="starfield" aria-hidden="true"></canvas>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="index.html" aria-label="Deep Stellar home">
+      <span class="brand-symbol"><span>✦</span></span>
+      <span class="brand-name">DEEP<span>STELLAR</span><small>EXPLORE THE UNKNOWN</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Home</a>
+      <a class="active" href="universe.html">Universe</a>
+      <a href="solar-system.html">Solar System</a>
+      <a href="missions.html">Missions</a>
+      <a href="videos.html">Videos</a>
+      <a href="crew.html">Our Crew</a>
+      <a href="gallery.html">Gallery</a>
+    </nav>
+    <a class="header-cta" href="videos.html">Start Exploring <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="breadcrumb">
+        <a href="index.html">HOME</a> <span>/</span> <span>UNIVERSE EXPLORATION</span>
+      </div>
+      <div class="eyebrow"><span class="pulse-dot"></span> 93 BILLION LIGHT-YEARS OF COSMOS</div>
+      <h1>THE EXPANDING<br><em>UNIVERSE.</em></h1>
+      <p class="page-hero-lead">Venture into the cosmic web where trillions of galaxies drift across cosmic time. From colossal stellar nurseries to gravitational titans that bend space itself, discover the mysteries that define our existence.</p>
+      <div class="hero-actions" style="justify-content:center;">
+        <a class="btn btn-primary" href="#galaxies">Explore Galaxies <span>↗</span></a>
+        <a class="btn btn-outline" href="#mysteries">Cosmic Mysteries ↗</a>
+      </div>
+    </section>
+
+    <!-- Cosmic Architecture Stats -->
+    <section class="section" style="padding-top:60px; padding-bottom:60px;">
+      <div class="stat-strip" style="margin-top:0; border-top:none;">
+        <div><strong>2 Trillion</strong><span>ESTIMATED GALAXIES</span></div>
+        <div><strong>93 Billion ly</strong><span>OBSERVABLE DIAMETER</span></div>
+        <div><strong>68% & 27%</strong><span>DARK ENERGY & DARK MATTER</span></div>
+      </div>
+    </section>
+
+    <!-- Galaxies Showcase -->
+    <section class="section" id="galaxies">
+      <div class="section-heading reveal">
+        <div>
+          <div class="section-kicker">01 / CELESTIAL ISLANDS</div>
+          <h2>Great <em>Galaxies.</em></h2>
+        </div>
+        <p>Vast swirling collections of billions of stars, planets,<br>and cosmic gas bound by gravitational harmony.</p>
+      </div>
+
+      <div class="content-grid reveal">
+        <div class="cosmic-box">
+          <span class="cosmic-box-tag">SPIRAL GALAXY · 2.5M LIGHT-YEARS</span>
+          <h3>Andromeda (M31)</h3>
+          <p>Our majestic celestial neighbor, Andromeda contains over one trillion stars and is moving toward the Milky Way at approximately 110 kilometers per second for an eventual cosmic merger in 4.5 billion years.</p>
+          <ul class="spec-list">
+            <li><span>DIAMETER</span><strong>220,000 Light-Years</strong></li>
+            <li><span>STELLAR MASS</span><strong>~1.5 Trillion M☉</strong></li>
+            <li><span>CONSTELLATION</span><strong>Andromeda</strong></li>
+          </ul>
+        </div>
+
+        <div class="cosmic-box">
+          <span class="cosmic-box-tag">GRAND DESIGN SPIRAL · 23M LIGHT-YEARS</span>
+          <h3>Whirlpool Galaxy (M51)</h3>
+          <p>Renowned for its dramatic spiral arms and gravitational dance with companion galaxy NGC 5195, M51 is one of the premier laboratories for studying galactic structure and intense star formation.</p>
+          <ul class="spec-list">
+            <li><span>DIAMETER</span><strong>76,000 Light-Years</strong></li>
+            <li><span>MORPHOLOGY</span><strong>SA(s)bc pec</strong></li>
+            <li><span>CONSTELLATION</span><strong>Canes Venatici</strong></li>
+          </ul>
+        </div>
+
+        <div class="cosmic-box">
+          <span class="cosmic-box-tag">UNLENTICULAR GALAXY · 31M LIGHT-YEARS</span>
+          <h3>Sombrero Galaxy (M104)</h3>
+          <p>Famous for its brilliant white bulbous core and dark, absorbing dust lane encircling its rim like a wide-brimmed Mexican hat, Sombrero harbors a supermassive black hole exceeding 1 billion solar masses.</p>
+          <ul class="spec-list">
+            <li><span>DIAMETER</span><strong>50,000 Light-Years</strong></li>
+            <li><span>BLACK HOLE MASS</span><strong>1 Billion M☉</strong></li>
+            <li><span>CONSTELLATION</span><strong>Virgo</strong></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nebulae & Stellar Birth -->
+    <section class="section" style="background:linear-gradient(180deg,#060914,#080d1b);">
+      <div class="section-heading reveal">
+        <div>
+          <div class="section-kicker">02 / STELLAR NURSERIES</div>
+          <h2>Nebulae & <em>Cosmic Clouds.</em></h2>
+        </div>
+        <p>Gigantic clouds of interstellar dust and hydrogen gas<br>where newborn stars ignite and ancient stars shed their outer layers.</p>
+      </div>
+
+      <div class="universe-grid reveal">
+        <div class="universe-card card-galaxy">
+          <div class="card-number">01</div>
+          <div class="card-content">
+            <span>EAGLE NEBULA · 6,500 LY</span>
+            <h3>Pillars of Creation</h3>
+            <p>Towers of interstellar hydrogen gas and dust in the Serpens constellation, sculpted by intense stellar winds from newly formed stars.</p>
+            <b>Distance: 6,500 Light-Years ↗</b>
+          </div>
+        </div>
+
+        <div class="universe-card card-planets">
+          <div class="card-number">02</div>
+          <div class="card-content">
+            <span>DIFFUSE NEBULA · 1,344 LY</span>
+            <h3>The Orion Nebula</h3>
+            <p>One of the brightest nebulae visible to the naked eye in the night sky, acting as the closest massive star-forming region to Earth.</p>
+            <b>Distance: 1,344 Light-Years ↗</b>
+          </div>
+        </div>
+
+        <div class="universe-card card-mystery">
+          <div class="card-number">03</div>
+          <div class="card-content">
+            <span>PLANETARY NEBULA · 2,570 LY</span>
+            <h3>The Ring Nebula (M57)</h3>
+            <p>The shimmering colorful shell of glowing gas expelled by a dying sun-like star in its final evolutionary stages.</p>
+            <b>Distance: 2,570 Light-Years ↗</b>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cosmic Mysteries -->
+    <section class="section" id="mysteries">
+      <div class="section-heading reveal">
+        <div>
+          <div class="section-kicker">03 / THE UNKNOWN FRONTIER</div>
+          <h2>Greatest <em>Mysteries.</em></h2>
+        </div>
+        <p>The profound questions that challenge modern physics<br>and expand human imagination.</p>
+      </div>
+
+      <div class="content-grid reveal">
+        <div class="cosmic-box">
+          <span class="cosmic-box-tag">GRAVITATIONAL ANOMALY</span>
+          <h3>Dark Matter</h3>
+          <p>An invisible, mysterious substance that does not emit, absorb, or reflect light, yet accounts for roughly 85% of all matter in the cosmos and holds galaxy clusters together.</p>
+          <div class="stat-pill">✦ 27% of Total Universe</div>
+        </div>
+
+        <div class="cosmic-box">
+          <span class="cosmic-box-tag">ACCELERATING EXPANSION</span>
+          <h3>Dark Energy</h3>
+          <p>A repulsive energy permeating all space, driving the accelerating expansion of the universe and outbalancing the mutual gravitational pull of cosmic matter.</p>
+          <div class="stat-pill">✦ 68% of Total Universe</div>
+        </div>
+
+        <div class="cosmic-box">
+          <span class="cosmic-box-tag">SPACETIME SINGULARITY</span>
+          <h3>Supermassive Black Holes</h3>
+          <p>Regions of infinite density where gravitational forces are so intense that nothing—not even light—can escape. At the center of almost every large galaxy sits one of these monsters.</p>
+          <div class="stat-pill">✦ Event Horizon Radius</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Navigation Hub -->
+    <section class="final-cta section reveal">
+      <div class="cta-stars">✦　·　✧　　·　✦</div>
+      <div class="section-kicker">CONTINUE YOUR JOURNEY</div>
+      <h2>Travel to our<br><em>Solar System.</em></h2>
+      <p>From deep space back to our celestial backyard: discover the eight planets and hundreds of moons orbiting our Sun.</p>
+      <div class="page-nav-bar">
+        <a class="btn btn-primary" href="solar-system.html">Explore Solar System <span>↗</span></a>
+        <a class="btn btn-outline" href="gallery.html">View Cosmic Gallery ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand" href="index.html">
+      <span class="brand-symbol"><span>✦</span></span>
+      <span class="brand-name">DEEP<span>STELLAR</span><small>EXPLORE THE UNKNOWN</small></span>
+    </a>
+    <p>Exploring the universe, one question at a time.</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="universe.html">Universe</a>
+      <a href="solar-system.html">Solar System</a>
+      <a href="missions.html">Missions</a>
+      <a href="videos.html">Videos</a>
+      <a href="crew.html">Crew</a>
+      <a href="gallery.html">Gallery</a>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> DEEP STELLAR. ALL RIGHTS RESERVED. | Design by Muhammad Asim Yar</span>
+      <a href="#top">BACK TO TOP ↑</a>
+      <a href="https://khudayarlabs.com/" target="_blank" rel="noopener">Powered by Khudayar Labs</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

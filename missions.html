@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore humanity's greatest space missions, deep space logs, and the fictional voyages of Stellar One with DEEP STELLAR.">
+  <meta name="theme-color" content="#050711">
+  <title>Missions & Flight Log — Stellar Exploration | DEEP STELLAR</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="loader" id="loader">
+    <div class="loader-mark">DS</div><span>CONNECTING TELEMETRY LINK</span>
+    <div class="loader-line"><i></i></div>
+  </div>
+  <canvas id="starfield" aria-hidden="true"></canvas>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="index.html" aria-label="Deep Stellar home">
+      <span class="brand-symbol"><span>✦</span></span>
+      <span class="brand-name">DEEP<span>STELLAR</span><small>EXPLORE THE UNKNOWN</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Home</a>
+      <a href="universe.html">Universe</a>
+      <a href="solar-system.html">Solar System</a>
+      <a class="active" href="missions.html">Missions</a>
+      <a href="videos.html">Videos</a>
+      <a href="crew.html">Our Crew</a>
+      <a href="gallery.html">Gallery</a>
+    </nav>
+    <a class="header-cta" href="videos.html">Start Exploring <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="breadcrumb">
+        <a href="index.html">HOME</a> <span>/</span> <span>MISSION CONTROL</span>
+      </div>
+      <div class="eyebrow"><span class="pulse-dot"></span> VOYAGES INTO UNCHARTED SPACE</div>
+      <h1>EXPEDITION<br><em>HORIZONS.</em></h1>
+      <p class="page-hero-lead">Humanity’s courage to reach beyond gravity: tracking the simulated long-range voyage of Stellar One alongside the landmark real-world missions that revolutionized our cosmic perspective.</p>
+      <div class="hero-actions" style="justify-content:center;">
+        <a class="btn btn-primary" href="#flight-deck">Live Simulation <span>↗</span></a>
+        <a class="btn btn-outline" href="#historic-missions">Historic Missions ↗</a>
+      </div>
+    </section>
+
+    <!-- Mission Dashboard -->
+    <section class="section" id="flight-deck">
+      <div class="section-heading reveal">
+        <div>
+          <div class="section-kicker">STELLAR ONE / FLAGSHIP LOG</div>
+          <h2>Mission <em>Telemetry.</em></h2>
+        </div>
+        <p>Continuous simulated coordinates, propulsion status,<br>and exploration milestones across deep space.</p>
+      </div>
+
+      <div class="mission-dashboard reveal">
+        <div class="dashboard-top">
+          <div><span class="live-indicator"></span> MISSION CONTROL / ACTIVE DEEP SPACE NETWORK</div>
+          <span>STELLAR ONE · REGISTRY NCC-001</span>
+        </div>
+        <div class="dashboard-main">
+          <div class="mission-visual">
+            <div class="radar"><i></i><i></i><i></i><b>✦</b></div>
+            <span class="radar-caption">DEEP SPACE TELEMETRY LINK</span>
+          </div>
+          <div class="mission-info">
+            <div class="mission-status">FLAGSHIP MISSION IN PROGRESS</div>
+            <h3>Beyond the<br><em>Blue Horizon.</em></h3>
+            <p>Cruising past the Kuiper Cliff, Stellar One conducts gravitational wave scans, interstellar particle analysis, and deep-range optical surveys of neighboring star systems.</p>
+            <div class="mission-progress">
+              <div><span>JOURNEY PROGRESS</span><b>74% OF CRUISE PHASE</b></div><i><b style="width:74%;"></b></i>
+            </div>
+            <a href="crew.html" class="btn btn-outline">Meet The Crew ↗</a>
+          </div>
+        </div>
+        <div class="dashboard-bottom">
+          <div><span>MISSION DESIGNATION</span><b>DS-001-ALPHA</b></div>
+          <div><span>CURRENT DISTANCE</span><b>48.2 ASTRONOMICAL UNITS</b></div>
+          <div><span>COMMUNICATION DELAY</span><b>6 HOURS 42 MINUTES</b></div>
+          <div><span>PRIMARY ENGINE</span><b class="status-active">VASIMR ION DRIVE (NOMINAL)</b></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Historic Space Missions -->
+    <section class="section" id="historic-missions" style="background:linear-gradient(180deg,#060914,#080d1b);">
+      <div class="section-heading reveal">
+        <div>
+          <div class="section-kicker">01 / REAL-WORLD PIONEERS</div>
+          <h2>Historic <em>Expeditions.</em></h2>
+        </div>
+        <p>The legendary robotic probes and human spaceflight programs<br>that unlocked the solar system.</p>
+      </div>
+
+      <div class="content-grid reveal">
+        <div class="cosmic-box">
+          <span class="cosmic-box-tag">INTERSTELLAR AMBASSADOR · 1977-PRESENT</span>
+          <h3>Voyager 1 & 2</h3>
+          <p>Having surveyed Jupiter, Saturn, Uranus, and Neptune, these legendary twin probes are now in interstellar space, bearing the Golden Record as humanity’s message to the stars.</p>
+          <ul class="spec-list">
+            <li><span>CURRENT DISTANCE</span><strong>>24 Billion km</strong></li>
+            <li><span>POWER SOURCE</span><strong>Radioisotope (RTG)</strong></li>
+            <li><span>STATUS</span><strong>Interstellar Journey</strong></li>
+          </ul>
+        </div>
+
+        <div class="cosmic-box">
+          <span class="cosmic-box-tag">INFRARED DEEP VISION · 2021-PRESENT</span>
+          <h3>James Webb Space Telescope</h3>
+          <p>Stationed at Lagrange Point 2 (L2), JWST peers through cosmic dust to capture the earliest galaxies formed just hundreds of millions of years after the Big Bang.</p>
+          <ul class="spec-list">
+            <li><span>MIRROR SIZE</span><strong>6.5 Meters (Gold Beryllium)</strong></li>
+            <li><span>ORBIT LOCATION</span><strong>Sun-Earth L2 (1.5M km)</strong></li>
+            <li><span>WAVELENGTHS</span><strong>Infrared & Near-IR</strong></li>
+          </ul>
+        </div>
+
+        <div class="cosmic-box">
+          <span class="cosmic-box-tag">LUNAR TO DEEP SPACE · 2022-FUTURE</span>
+          <h3>The Artemis Program</h3>
+          <p>Humanity’s return to the Moon, landing the first woman and next person of color, establishing the Gateway space station, and preparing for the first human expedition to Mars.</p>
+          <ul class="spec-list">
+            <li><span>LAUNCH VEHICLE</span><strong>Space Launch System (SLS)</strong></li>
+            <li><span>SPACECRAFT</span><strong>Orion + Human Lander</strong></li>
+            <li><span>OBJECTIVE</span><strong>Permanent Lunar Base</strong></li>
+          </ul>
+        </div>
+
+        <div class="cosmic-box">
+          <span class="cosmic-box-tag">SATURN & TITAN EXPLORER · 1997-2017</span>
+          <h3>Cassini-Huygens</h3>
+          <p>A thirteen-year orbital odyssey around Saturn that uncovered liquid methane lakes on Titan, active water geysers on icy Enceladus, and concluded with the dramatic Grand Finale dive.</p>
+          <ul class="spec-list">
+            <li><span>ORBITS OF SATURN</span><strong>294 Completed</strong></li>
+            <li><span>SURFACE LANDING</span><strong>Huygens Probe on Titan</strong></li>
+            <li><span>LEGACY</span><strong>Ocean Worlds Discovery</strong></li>
+          </ul>
+        </div>
+
+        <div class="cosmic-box">
+          <span class="cosmic-box-tag">MARS SURFACE ROVERS · 2020-PRESENT</span>
+          <h3>Perseverance & Curiosity</h3>
+          <p>Advanced nuclear-powered science laboratories actively traversing Martian craters, seeking ancient biosignatures, collecting rock cores, and testing oxygen production via MOXIE.</p>
+          <ul class="spec-list">
+            <li><span>LOCATION</span><strong>Jezero Crater, Mars</strong></li>
+            <li><span>SPECIAL COMPANION</span><strong>Ingenuity Helicopter</strong></li>
+            <li><span>MISSION GOAL</span><strong>Astrobiology & Sample Cache</strong></li>
+          </ul>
+        </div>
+
+        <div class="cosmic-box">
+          <span class="cosmic-box-tag">OUTER OCEAN PROBE · 2024-FUTURE</span>
+          <h3>Europa Clipper</h3>
+          <p>Targeted to perform nearly 50 close flybys of Jupiter's icy moon Europa to determine whether its vast subsurface ocean possesses conditions suitable to sustain extraterrestrial life.</p>
+          <ul class="spec-list">
+            <li><span>LAUNCH DATE</span><strong>October 2024</strong></li>
+            <li><span>TARGET ARRIVAL</span><strong>2030 (Jupiter System)</strong></li>
+            <li><span>INSTRUMENTS</span><strong>Ice-Penetrating Radar</strong></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission Milestones Timeline -->
+    <section class="section">
+      <div class="section-heading reveal">
+        <div>
+          <div class="section-kicker">02 / FLIGHT TRAJECTORY</div>
+          <h2>Exploration <em>Timeline.</em></h2>
+        </div>
+        <p>The progression of humanity's steps from low Earth orbit to the interstellar frontier.</p>
+      </div>
+
+      <div class="timeline reveal">
+        <div class="timeline-item">
+          <span>01</span>
+          <div>
+            <b>Orbital Foundation</b>
+            <p>From Sputnik to Apollo 11 and the International Space Station, proving life can work beyond Earth's atmosphere.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <span>02</span>
+          <div>
+            <b>System-Wide Reconnaissance</b>
+            <p>Robotic orbiters and landers reaching every major planet, mapping asteroids, and touching comets.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <span>03</span>
+          <div>
+            <b>Interstellar Dawn</b>
+            <p>Crewed outposts on the Moon and Mars, high-speed ion propulsion, and voyages into deep space.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Next Section CTA -->
+    <section class="final-cta section reveal">
+      <div class="cta-stars">✦　·　✧　　·　✦</div>
+      <div class="section-kicker">MEET THE PILOTS AND SCIENTISTS</div>
+      <h2>Who Commands<br><em>Stellar One?</em></h2>
+      <p>Meet Captain Alex and the elite scientific explorers navigating our journeys across the solar system.</p>
+      <div class="page-nav-bar">
+        <a class="btn btn-primary" href="crew.html">Meet Our Crew <span>↗</span></a>
+        <a class="btn btn-outline" href="videos.html">Watch Mission Documentaries ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand" href="index.html">
+      <span class="brand-symbol"><span>✦</span></span>
+      <span class="brand-name">DEEP<span>STELLAR</span><small>EXPLORE THE UNKNOWN</small></span>
+    </a>
+    <p>Exploring the universe, one question at a time.</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="universe.html">Universe</a>
+      <a href="solar-system.html">Solar System</a>
+      <a href="missions.html">Missions</a>
+      <a href="videos.html">Videos</a>
+      <a href="crew.html">Crew</a>
+      <a href="gallery.html">Gallery</a>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> DEEP STELLAR. ALL RIGHTS RESERVED. | Design by Muhammad Asim Yar</span>
+      <a href="#top">BACK TO TOP ↑</a>
+      <a href="https://khudayarlabs.com/" target="_blank" rel="noopener">Powered by Khudayar Labs</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

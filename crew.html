@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Meet Captain Alex and the scientific flight crew of Stellar One guiding deep space exploration with DEEP STELLAR.">
+  <meta name="theme-color" content="#050711">
+  <title>Our Crew & Spacecraft Systems — Stellar One | DEEP STELLAR</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="loader" id="loader">
+    <div class="loader-mark">DS</div><span>AUTHENTICATING CREW ROSTER</span>
+    <div class="loader-line"><i></i></div>
+  </div>
+  <canvas id="starfield" aria-hidden="true"></canvas>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="index.html" aria-label="Deep Stellar home">
+      <span class="brand-symbol"><span>✦</span></span>
+      <span class="brand-name">DEEP<span>STELLAR</span><small>EXPLORE THE UNKNOWN</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Home</a>
+      <a href="universe.html">Universe</a>
+      <a href="solar-system.html">Solar System</a>
+      <a href="missions.html">Missions</a>
+      <a href="videos.html">Videos</a>
+      <a class="active" href="crew.html">Our Crew</a>
+      <a href="gallery.html">Gallery</a>
+    </nav>
+    <a class="header-cta" href="videos.html">Start Exploring <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="breadcrumb">
+        <a href="index.html">HOME</a> <span>/</span> <span>OUR CREW</span>
+      </div>
+      <div class="eyebrow"><span class="pulse-dot"></span> THE HUMAN ELEMENT OF EXPLORATION</div>
+      <h1>MEET OUR<br><em>EXPLORERS.</em></h1>
+      <p class="page-hero-lead">Behind every orbital manoeuvre and deep-space discovery stands a crew of scientists, engineers, and navigators dedicated to pushing humanity's boundaries beyond known frontiers.</p>
+      <div class="hero-actions" style="justify-content:center;">
+        <a class="btn btn-primary" href="#commander">Commander Profile <span>↗</span></a>
+        <a class="btn btn-outline" href="#roster">Full Crew Roster ↗</a>
+      </div>
+    </section>
+
+    <!-- Commander Spotlight -->
+    <section class="section crew-section" id="commander">
+      <div class="crew-portrait reveal">
+        <div class="portrait-orbit"></div>
+        <div class="portrait-astronaut">
+          <div class="portrait-visor"></div>
+        </div>
+        <span class="portrait-tag">COMMAND / ARCHIVE DS-001</span>
+      </div>
+      <div class="crew-copy reveal">
+        <div class="section-kicker">01 / FLIGHT COMMANDER</div>
+        <h2>Captain <em>Alex.</em></h2>
+        <p class="crew-subtitle">"Curiosity is our compass; discovery is our destination."</p>
+        <p>Captain Alex has logged over 4,200 hours in zero gravity across long-duration lunar orbital missions and deep interplanetary test flights. With a background in aerospace engineering and orbital dynamics, Alex commands Stellar One with calm conviction and an unwavering passion for scientific exploration.</p>
+        <div class="crew-credentials">
+          <div><span>CALLSIGN</span><b>STELLAR-01</b></div>
+          <div><span>SPECIALTY</span><b>DEEP SPACE NAVIGATION</b></div>
+          <div><span>STATUS</span><b>ACTIVE FLIGHT DUTY</b></div>
+        </div>
+        <a class="under-link" href="missions.html">View active missions ↗</a>
+      </div>
+    </section>
+
+    <!-- Crew Roster Grid -->
+    <section class="section" id="roster" style="background:linear-gradient(180deg,#060914,#080d1b);">
+      <div class="section-heading reveal">
+        <div>
+          <div class="section-kicker">02 / SCIENTIFIC SPECIALISTS</div>
+          <h2>Mission <em>Specialists.</em></h2>
+        </div>
+        <p>The specialized team supporting every phase of planetary observation and ship operations.</p>
+      </div>
+
+      <div class="crew-detail-grid reveal">
+        <div class="crew-card">
+          <div class="crew-avatar">🪐</div>
+          <h3>Dr. Elena Vance</h3>
+          <div class="crew-role">CHIEF ASTROPHYSICIST</div>
+          <p>Former research lead at the European Southern Observatory, Elena specializes in spectroscopy, exoplanet atmospheric profiling, and gravitational wave detection.</p>
+          <ul class="spec-list">
+            <li><span>DOCTORATE</span><strong>Cambridge (Astrophysics)</strong></li>
+            <li><span>FOCUS</span><strong>Planetary Atmospheres</strong></li>
+          </ul>
+        </div>
+
+        <div class="crew-card">
+          <div class="crew-avatar">⚡</div>
+          <h3>Marcus Chen</h3>
+          <div class="crew-role">CHIEF PROPULSION ENGINEER</div>
+          <p>A veteran flight engineer who oversaw the development of the VASIMR ion drive, Marcus maintains reactor stability and sub-light propulsion systems on Stellar One.</p>
+          <ul class="spec-list">
+            <li><span>SPECIALTY</span><strong>Magnetoplasma Propulsion</strong></li>
+            <li><span>EXPEDITIONS</span><strong>Mars Transit Test II</strong></li>
+          </ul>
+        </div>
+
+        <div class="crew-card">
+          <div class="crew-avatar">🧬</div>
+          <h3>Dr. Sophia Morales</h3>
+          <div class="crew-role">EXOBIOLOGY & LIFE SYSTEMS LEAD</div>
+          <p>Sophia designs closed-loop biological life support systems and leads our astrobiology protocols for detecting microbial biosignatures on icy ocean worlds.</p>
+          <ul class="spec-list">
+            <li><span>DOCTORATE</span><strong>MIT (Astrobiology)</strong></li>
+            <li><span>FOCUS</span><strong>Extremophile Biology</strong></li>
+          </ul>
+        </div>
+
+        <div class="crew-card">
+          <div class="crew-avatar">🛰️</div>
+          <h3>Kai Jensen</h3>
+          <div class="crew-role">FLIGHT OPERATIONS & TELEMETRY</div>
+          <p>Responsible for celestial guidance, communication arrays, and deep-space telemetry, Kai ensures that high-bandwidth data reaches Earth across billions of miles.</p>
+          <ul class="spec-list">
+            <li><span>BACKGROUND</span><strong>Orbital Dynamics & DSN</strong></li>
+            <li><span>EXPERIENCE</span><strong>Outer Rim Survey IV</strong></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ship Architecture Section -->
+    <section class="section">
+      <div class="section-heading reveal">
+        <div>
+          <div class="section-kicker">03 / VESSEL SYSTEMS</div>
+          <h2>Inside <em>Stellar One.</em></h2>
+        </div>
+        <p>The technological habitat enabling human explorers to endure deep interplanetary voids.</p>
+      </div>
+
+      <div class="content-grid reveal">
+        <div class="cosmic-box">
+          <span class="cosmic-box-tag">GRAVITY SIMULATION</span>
+          <h3>Centrifugal Habitat Ring</h3>
+          <p>Rotating at 4 RPM to produce 0.7 Earth gravity, protecting crew bone density and cardiovascular health throughout multi-year interplanetary voyages.</p>
+        </div>
+
+        <div class="cosmic-box">
+          <span class="cosmic-box-tag">CLOSED-LOOP BIOSPHERE</span>
+          <h3>Hydroponic Biome</h3>
+          <p>Self-replenishing algae bioreactors and vertical gardens recycling 98% of onboard water and generating pure oxygen through biological photosynthesis.</p>
+        </div>
+
+        <div class="cosmic-box">
+          <span class="cosmic-box-tag">RADIATION DEFENSE</span>
+          <h3>Magnetic Deflection Shield</h3>
+          <p>Surrounding the living quarters with high-temperature superconducting coils and water jackets to deflect solar energetic particles and galactic cosmic rays.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Next Section CTA -->
+    <section class="final-cta section reveal">
+      <div class="cta-stars">✦　·　✧　　·　✦</div>
+      <div class="section-kicker">DISCOVER OUR IMAGES</div>
+      <h2>Experience the<br><em>Cosmic Gallery.</em></h2>
+      <p>High-resolution captures of distant galaxies, glowing nebulae, and views of Earth from orbit.</p>
+      <div class="page-nav-bar">
+        <a class="btn btn-primary" href="gallery.html">Open Cosmic Gallery <span>↗</span></a>
+        <a class="btn btn-outline" href="index.html">Back to Home ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand" href="index.html">
+      <span class="brand-symbol"><span>✦</span></span>
+      <span class="brand-name">DEEP<span>STELLAR</span><small>EXPLORE THE UNKNOWN</small></span>
+    </a>
+    <p>Exploring the universe, one question at a time.</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="universe.html">Universe</a>
+      <a href="solar-system.html">Solar System</a>
+      <a href="missions.html">Missions</a>
+      <a href="videos.html">Videos</a>
+      <a href="crew.html">Crew</a>
+      <a href="gallery.html">Gallery</a>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> DEEP STELLAR. ALL RIGHTS RESERVED. | Design by Muhammad Asim Yar</span>
+      <a href="#top">BACK TO TOP ↑</a>
+      <a href="https://khudayarlabs.com/" target="_blank" rel="noopener">Powered by Khudayar Labs</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

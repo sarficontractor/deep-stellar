@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="High-resolution astrophotography and cosmic gallery featuring deep space, nebulae, galaxies, and Earth from orbit | DEEP STELLAR.">
+  <meta name="theme-color" content="#050711">
+  <title>Cosmic Gallery — High-Resolution Astrophotography | DEEP STELLAR</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="loader" id="loader">
+    <div class="loader-mark">DS</div><span>RENDERING HIGH-RES VISUALS</span>
+    <div class="loader-line"><i></i></div>
+  </div>
+  <canvas id="starfield" aria-hidden="true"></canvas>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="index.html" aria-label="Deep Stellar home">
+      <span class="brand-symbol"><span>✦</span></span>
+      <span class="brand-name">DEEP<span>STELLAR</span><small>EXPLORE THE UNKNOWN</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Home</a>
+      <a href="universe.html">Universe</a>
+      <a href="solar-system.html">Solar System</a>
+      <a href="missions.html">Missions</a>
+      <a href="videos.html">Videos</a>
+      <a href="crew.html">Our Crew</a>
+      <a class="active" href="gallery.html">Gallery</a>
+    </nav>
+    <a class="header-cta" href="videos.html">Start Exploring <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="breadcrumb">
+        <a href="index.html">HOME</a> <span>/</span> <span>COSMIC GALLERY</span>
+      </div>
+      <div class="eyebrow"><span class="pulse-dot"></span> ULTRA-HIGH DEFINITION ASTROPHOTOGRAPHY</div>
+      <h1>VISIONS OF THE<br><em>INFINITE.</em></h1>
+      <p class="page-hero-lead">Step into a curated collection of deep-space astrophotography captured by the James Webb Space Telescope, Hubble Space Telescope, and interplanetary exploratory probes.</p>
+      <div class="hero-actions" style="justify-content:center;">
+        <a class="btn btn-primary" href="#collection">View Gallery <span>↗</span></a>
+        <a class="btn btn-outline" href="universe.html">Universe Guide ↗</a>
+      </div>
+    </section>
+
+    <!-- Main Gallery Grid -->
+    <section class="section" id="collection" style="padding-top:60px;">
+      <div class="section-heading reveal">
+        <div>
+          <div class="section-kicker">01 / DEEP SPACE OBSERVATORY</div>
+          <h2>Featured <em>Captures.</em></h2>
+        </div>
+        <p>Click on any frame to view in high resolution.</p>
+      </div>
+
+      <div class="gallery-grid reveal">
+        <a class="gallery-item gallery-large" href="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=1800&q=85" target="_blank" rel="noopener">
+          <span>01 / CARINA NEBULA · JWST NIRCam</span>
+        </a>
+        <a class="gallery-item gallery-tall" href="https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?auto=format&fit=crop&w=1500&q=85" target="_blank" rel="noopener">
+          <span>02 / JUPITER CLOUD BANDS · JUNO CAM</span>
+        </a>
+        <a class="gallery-item gallery-wide" href="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=1800&q=85" target="_blank" rel="noopener">
+          <span>03 / EARTH SUNRISE FROM ORBIT · ISS</span>
+        </a>
+        <a class="gallery-item gallery-small" href="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1500&q=85" target="_blank" rel="noopener">
+          <span>04 / THE BLUE OASIS · SATELLITE COMPOSITE</span>
+        </a>
+      </div>
+
+      <!-- Extended Visual Collection -->
+      <div class="content-grid reveal" style="margin-top:40px;">
+        <div class="cosmic-box" style="padding:0; overflow:hidden;">
+          <div style="height:220px; background-image:url('https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?auto=format&fit=crop&w=800&q=80'); background-size:cover; background-position:center;"></div>
+          <div style="padding:24px;">
+            <span class="cosmic-box-tag">MILKY WAY ARCH · ATACAMA DESERT</span>
+            <h3>The Galactic Core</h3>
+            <p>A crystal-clear panoramic view of the Milky Way core stretching across the ultra-dry Chilean Andes.</p>
+            <ul class="spec-list">
+              <li><span>LOCATION</span><strong>ALMA Observatory, Chile</strong></li>
+              <li><span>EXPOSURE</span><strong>Stacked 25-minute composite</strong></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cosmic-box" style="padding:0; overflow:hidden;">
+          <div style="height:220px; background-image:url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80'); background-size:cover; background-position:center;"></div>
+          <div style="padding:24px;">
+            <span class="cosmic-box-tag">SOLAR ACTIVITY · SDO SATELLITE</span>
+            <h3>Coronal Mass Ejection</h3>
+            <p>Extreme ultraviolet capture showing plasma filaments erupting along the magnetic arches of our local star.</p>
+            <ul class="spec-list">
+              <li><span>WAVELENGTH</span><strong>304 Ångström (Extreme UV)</strong></li>
+              <li><span>OBSERVATORY</span><strong>Solar Dynamics Observatory</strong></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cosmic-box" style="padding:0; overflow:hidden;">
+          <div style="height:220px; background-image:url('https://images.unsplash.com/photo-1447433589675-4aaa569f3e05?auto=format&fit=crop&w=800&q=80'); background-size:cover; background-position:center;"></div>
+          <div style="padding:24px;">
+            <span class="cosmic-box-tag">DEEP FIELD · HUBBLE SPACE TELESCOPE</span>
+            <h3>Ultra Deep Field</h3>
+            <p>Peering into a seemingly empty patch of sky to uncover nearly 10,000 distinct galaxies spanning billions of light-years.</p>
+            <ul class="spec-list">
+              <li><span>TARGET SKY AREA</span><strong>Forging deep into Fornax</strong></li>
+              <li><span>TIME DISTANCE</span><strong>13 Billion Light-Years</strong></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Next Section CTA -->
+    <section class="final-cta section reveal">
+      <div class="cta-stars">✦　·　✧　　·　✦</div>
+      <div class="section-kicker">RETURN TO HOME</div>
+      <h2>Begin Your Journey<br><em>from the Start.</em></h2>
+      <p>Explore the interactive cosmic overview or check out our space documentaries.</p>
+      <div class="page-nav-bar">
+        <a class="btn btn-primary" href="index.html">Back to Home <span>↗</span></a>
+        <a class="btn btn-outline" href="videos.html">Watch Videos ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand" href="index.html">
+      <span class="brand-symbol"><span>✦</span></span>
+      <span class="brand-name">DEEP<span>STELLAR</span><small>EXPLORE THE UNKNOWN</small></span>
+    </a>
+    <p>Exploring the universe, one question at a time.</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="universe.html">Universe</a>
+      <a href="solar-system.html">Solar System</a>
+      <a href="missions.html">Missions</a>
+      <a href="videos.html">Videos</a>
+      <a href="crew.html">Crew</a>
+      <a href="gallery.html">Gallery</a>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> DEEP STELLAR. ALL RIGHTS RESERVED. | Design by Muhammad Asim Yar</span>
+      <a href="#top">BACK TO TOP ↑</a>
+      <a href="https://khudayarlabs.com/" target="_blank" rel="noopener">Powered by Khudayar Labs</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
