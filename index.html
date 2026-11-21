@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DEEP STELLAR — explore planets, galaxies, cosmic mysteries and extraordinary journeys through space.">
+  <meta name="theme-color" content="#050711">
+  <title>DEEP STELLAR — Beyond the Stars</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="loader" id="loader"><div class="loader-mark">DS</div><span>PREPARING YOUR JOURNEY</span><div class="loader-line"><i></i></div></div>
+  <canvas id="starfield" aria-hidden="true"></canvas>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="#home" aria-label="Deep Stellar home">
+      <span class="brand-symbol"><span>✦</span></span>
+      <span class="brand-name">DEEP<span>STELLAR</span><small>EXPLORE THE UNKNOWN</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    <nav class="main-nav" id="mainNav">
+      <a class="active" href="#home">Home</a><a href="#universe">Universe</a><a href="#solar-system">Solar System</a>
+      <a href="#missions">Missions</a><a href="#videos">Videos</a><a href="#crew">Our Crew</a><a href="#gallery">Gallery</a>
+    </nav>
+    <a class="header-cta" href="#videos">Start Exploring <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span class="pulse-dot"></span> A JOURNEY THROUGH THE COSMOS</div>
+        <h1>BEYOND<br><em>THE STARS.</em></h1>
+        <p class="hero-lead">The universe is not just a place to explore. It is a story waiting to be discovered.</p>
+        <div class="hero-actions"><a class="btn btn-primary" href="#universe">Explore the Universe <span>↗</span></a><a class="text-link" href="#videos"><span class="play-icon">▶</span> Watch our stories</a></div>
+        <div class="hero-meta"><div><strong>∞</strong><span>WONDERS TO DISCOVER</span></div><div><strong>1</strong><span>ENDLESS JOURNEY</span></div><div><strong>01</strong><span>STELLAR ONE</span></div></div>
+      </div>
+      <div class="hero-art reveal">
+        <div class="hero-orbit orbit-a"></div><div class="hero-orbit orbit-b"></div>
+        <div class="hero-planet"></div><div class="hero-moon"></div>
+        <div class="hero-astronaut"><div class="astronaut-helmet"><div class="helmet-glass"></div></div><div class="astronaut-body"></div><div class="astronaut-pack"></div></div>
+        <div class="floating-label label-one"><span class="tiny-star">✦</span> UNKNOWN IS CALLING</div>
+        <div class="floating-label label-two">SPACE LOG / 001</div>
+        <div class="hero-coordinate">RA 18h 36m 56s<br>DEC +38° 47′ 01″</div>
+      </div>
+      <div class="scroll-cue"><span></span> SCROLL TO EXPLORE</div>
+    </section>
+
+    <section class="intro section reveal">
+      <div class="section-kicker">01 / OUR PURPOSE</div><div class="intro-grid">
+        <h2>Curiosity has<br>no <em>horizon.</em></h2>
+        <div><p>From the worlds orbiting our Sun to galaxies billions of light-years away, DEEP STELLAR brings the wonders of space closer to you.</p><a class="under-link" href="#crew">Meet the explorers <span>↗</span></a></div>
+      </div>
+      <div class="stat-strip"><div><strong>8</strong><span>PLANETS IN OUR SOLAR SYSTEM</span></div><div><strong>100B+</strong><span>GALAXIES ESTIMATED IN THE OBSERVABLE UNIVERSE</span></div><div><strong>13.8B</strong><span>YEARS OF COSMIC HISTORY</span></div></div>
+    </section>
+
+    <section class="section universe-section" id="universe">
+      <div class="section-heading reveal"><div><div class="section-kicker">02 / DISCOVER THE UNKNOWN</div><h2>Explore the <em>universe.</em></h2></div><p>Every direction holds a mystery.<br>Choose where your curiosity takes you.</p></div>
+      <div class="universe-grid">
+        <a class="universe-card card-galaxy reveal" href="#gallery"><div class="card-number">01</div><div class="card-content"><span>DEEP SPACE</span><h3>Galaxies & Nebulae</h3><p>Vast islands of stars and clouds of cosmic creation.</p><b>Explore collection ↗</b></div></a>
+        <a class="universe-card card-planets reveal" href="#solar-system"><div class="card-number">02</div><div class="card-content"><span>OUR NEIGHBOURHOOD</span><h3>Planets & Moons</h3><p>Discover strange worlds, rings and hidden oceans.</p><b>Explore collection ↗</b></div></a>
+        <a class="universe-card card-mystery reveal" href="#missions"><div class="card-number">03</div><div class="card-content"><span>THE BIG QUESTIONS</span><h3>Cosmic Mysteries</h3><p>Black holes, dark matter and what lies beyond.</p><b>Explore collection ↗</b></div></a>
+      </div>
+    </section>
+
+    <section class="solar-section section" id="solar-system">
+      <div class="section-heading reveal"><div><div class="section-kicker">03 / INTERACTIVE EXPERIENCE</div><h2>Our solar <em>system.</em></h2></div><p>Travel through our celestial neighbourhood.<br>Select a world to reveal its story.</p></div>
+      <div class="solar-layout reveal">
+        <div class="solar-canvas-wrap"><div id="solarCanvas" aria-label="Interactive 3D solar system"></div><div class="solar-hint">DRAG TO ROTATE · SCROLL TO ZOOM</div><div class="solar-loading" id="solarLoading">Loading solar system…</div></div>
+        <aside class="planet-panel"><div class="panel-label">MISSION DATABASE / PLANET PROFILE</div><div class="planet-symbol" id="planetSymbol">☉</div><h3 id="planetName">The Sun</h3><p id="planetDescription">The star at the heart of our solar system, holding eight planets in its gravitational embrace.</p><div class="planet-facts"><div><span>TYPE</span><b id="planetType">Star</b></div><div><span>DIAMETER</span><b id="planetDiameter">1.39 million km</b></div><div><span>DAY LENGTH</span><b id="planetDay">About 25 Earth days</b></div></div><div class="planet-selector" id="planetSelector"></div></aside>
+      </div>
+    </section>
+
+    <section class="mission-section section" id="missions">
+      <div class="section-heading reveal"><div><div class="section-kicker">04 / MISSION CONTROL</div><h2>Stellar One <em>missions.</em></h2></div><p>Our fictional exploration log —<br>inspired by real science and discovery.</p></div>
+      <div class="mission-dashboard reveal">
+        <div class="dashboard-top"><div><span class="live-indicator"></span> MISSION CONTROL / LIVE SIMULATION</div><span>STELLAR ONE · FLEET 001</span></div>
+        <div class="dashboard-main"><div class="mission-visual"><div class="radar"><i></i><i></i><i></i><b>✦</b></div><span class="radar-caption">DEEP SPACE TELEMETRY</span></div><div class="mission-info"><div class="mission-status">CURRENT FEATURED MISSION</div><h3>Beyond the<br><em>Blue Horizon.</em></h3><p>Follow Captain Alex and the Stellar One crew on a cinematic journey across our solar system and into the great unknown.</p><div class="mission-progress"><div><span>JOURNEY PROGRESS</span><b>68%</b></div><i><b></b></i></div><a href="#videos" class="btn btn-outline">View mission stories ↗</a></div></div>
+        <div class="dashboard-bottom"><div><span>MISSION ID</span><b>DS-001</b></div><div><span>DESTINATION</span><b>Outer Solar System</b></div><div><span>STATUS</span><b class="status-active">Exploration log</b></div></div>
+      </div>
+      <div class="timeline reveal"><div class="timeline-item"><span>01</span><div><b>Launch Sequence</b><p>Stellar One begins its imagined voyage.</p></div></div><div class="timeline-item"><span>02</span><div><b>Planetary Flyby</b><p>A closer look at the worlds around our Sun.</p></div></div><div class="timeline-item"><span>03</span><div><b>Deep Space</b><p>Questions grow as familiar landmarks fade.</p></div></div></div>
+    </section>
+
+    <section class="videos-section section" id="videos">
+      <div class="section-heading reveal"><div><div class="section-kicker">05 / WATCH & LEARN</div><h2>Stories from <em>space.</em></h2></div><p>Documentary-style journeys, cosmic questions<br>and discoveries worth sharing.</p></div>
+      <div class="video-tools reveal"><div class="filter-tabs" id="videoFilters"><button class="filter-btn active" data-filter="all">All stories</button><button class="filter-btn" data-filter="mysteries">Mysteries</button><button class="filter-btn" data-filter="planets">Planets</button><button class="filter-btn" data-filter="galaxies">Galaxies</button></div><label class="search-box"><span>⌕</span><input type="search" id="videoSearch" placeholder="Search documentaries…" aria-label="Search documentaries"></label></div>
+      <div class="video-grid" id="videoGrid">
+        <article class="video-card reveal" data-category="mysteries" data-title="What Lies Beyond the Universe"><a class="video-thumb thumb-one" href="https://www.youtube.com/@DeepStellar" target="_blank" rel="noopener"><span class="video-play">▶</span><span class="video-duration">FEATURED</span></a><div class="video-meta"><span>MYSTERIES · FEATURED</span><h3>What Lies Beyond the Universe?</h3><p>Could there be more beyond everything we can observe?</p><a href="https://www.youtube.com/@DeepStellar" target="_blank" rel="noopener">Watch on YouTube ↗</a></div></article>
+        <article class="video-card reveal" data-category="planets" data-title="A Journey Through Our Solar System"><a class="video-thumb thumb-two" href="https://www.youtube.com/@DeepStellar" target="_blank" rel="noopener"><span class="video-play">▶</span><span class="video-duration">SPACE JOURNEY</span></a><div class="video-meta"><span>PLANETS · EXPLORATION</span><h3>A Journey Through Our Solar System</h3><p>Meet the worlds orbiting our local star.</p><a href="https://www.youtube.com/@DeepStellar" target="_blank" rel="noopener">Watch on YouTube ↗</a></div></article>
+        <article class="video-card reveal" data-category="galaxies" data-title="The Giants of the Cosmos"><a class="video-thumb thumb-three" href="https://www.youtube.com/@DeepStellar" target="_blank" rel="noopener"><span class="video-play">▶</span><span class="video-duration">COSMIC SCALE</span></a><div class="video-meta"><span>GALAXIES · DEEP SPACE</span><h3>The Giants of the Cosmos</h3><p>Explore the immense structures of the universe.</p><a href="https://www.youtube.com/@DeepStellar" target="_blank" rel="noopener">Watch on YouTube ↗</a></div></article>
+      </div>
+      <p class="video-note">Demo video cards — replace the sample links and details with your published YouTube videos.</p>
+    </section>
+
+    <section class="crew-section section" id="crew">
+      <div class="crew-portrait reveal"><div class="portrait-orbit"></div><div class="portrait-astronaut"><div class="portrait-visor"></div></div><span class="portrait-tag">CREW FILE / 001</span></div>
+      <div class="crew-copy reveal"><div class="section-kicker">06 / MEET THE CREW</div><h2>Meet Captain <em>Alex.</em></h2><p class="crew-subtitle">Curiosity is the compass. Discovery is the destination.</p><p>Captain Alex is the fictional guide of Stellar One, leading our audience through cinematic, science-inspired journeys across the cosmos. Every mission is an invitation to ask bigger questions.</p><div class="crew-credentials"><div><span>CALLSIGN</span><b>STELLAR-01</b></div><div><span>ROLE</span><b>MISSION COMMANDER</b></div><div><span>MISSION</span><b>EXPLORE THE UNKNOWN</b></div></div><a class="under-link" href="#missions">Explore mission log ↗</a></div>
+    </section>
+
+    <section class="gallery-section section" id="gallery">
+      <div class="section-heading reveal"><div><div class="section-kicker">07 / COSMIC GALLERY</div><h2>Visions of the <em>infinite.</em></h2></div><p>A visual collection inspired by the<br>beauty and scale of the cosmos.</p></div>
+      <div class="gallery-grid">
+        <a class="gallery-item gallery-large reveal" href="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=1400&q=85" target="_blank" rel="noopener"><span>01 / NEBULA</span></a>
+        <a class="gallery-item gallery-tall reveal" href="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=85" target="_blank" rel="noopener"><span>02 / WORLDS</span></a>
+        <a class="gallery-item gallery-wide reveal" href="https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=1400&q=85" target="_blank" rel="noopener"><span>03 / ORBIT</span></a>
+        <a class="gallery-item gallery-small reveal" href="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=85" target="_blank" rel="noopener"><span>04 / EARTH</span></a>
+      </div>
+    </section>
+
+    <section class="quote-section section reveal"><div class="quote-mark">“</div><blockquote>The universe is under no obligation to make sense to you.</blockquote><span>— NEIL DEGRASSE TYSON</span><p class="quote-note">A reminder to stay curious, keep questioning and keep exploring.</p></section>
+
+    <section class="final-cta section reveal"><div class="cta-stars">✦　·　✧　　·　✦</div><div class="section-kicker">YOUR JOURNEY STARTS HERE</div><h2>Stay curious.<br><em>Look up.</em></h2><p>Join DEEP STELLAR for more cosmic mysteries, science-inspired journeys and extraordinary stories.</p><a class="btn btn-primary" href="https://www.youtube.com/@DeepStellar" target="_blank" rel="noopener">Join our YouTube journey ↗</a></section>
+  </main>
+
+  <footer class="site-footer"><a class="brand" href="#home"><span class="brand-symbol"><span>✦</span></span><span class="brand-name">DEEP<span>STELLAR</span><small>EXPLORE THE UNKNOWN</small></span></a><p>Exploring the universe, one question at a time.</p><div class="footer-links"><a href="#universe">Universe</a><a href="#missions">Missions</a><a href="#videos">Videos</a><a href="#crew">Crew</a><a href="#gallery">Gallery</a></div><div class="footer-bottom"><span>© <span id="year"></span> DEEP STELLAR. ALL RIGHTS RESERVED.</span><a href="#top">BACK TO TOP ↑</a><span>MADE FOR THE CURIOUS</span></div></footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r152/three.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
